@@ -24,3 +24,4 @@ Author: Cuong Phan
 | 121  | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy    | [C++](./algorithms/cpp/121_Iterative.cpp) | C++: Update minBuy and maxProfit separately. |C++: $O(n)$|C++: $O(1)$|
 | 122  | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Medium    | [C++](./algorithms/cpp/122_Iterative.cpp) | C++: If price is lower, update minBuy if not sell constantly. |C++: $O(n)$|C++: $O(1)$|
 | 125  | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy    | [C++](./algorithms/cpp/125_TwoPointers.cpp) | C++: Two pointers. |C++: $O(n)$|C++: $O(1)$|
+| 392  | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | Easy    | [C++](./algorithms/cpp/392_Iterative.cpp) | C++: Iterative approach. |C++: $O(n)$|C++: $O(1)$|
