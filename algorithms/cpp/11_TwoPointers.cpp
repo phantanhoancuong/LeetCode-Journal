@@ -20,31 +20,29 @@ n == height.length
 2 <= n <= 10^5
 0 <= height[i] <= 10^4 */
 
-public class Solution {
-    public int MaxArea(int[] height) {
-
-        int maxWater = 0;
-        
-        // Two pointers at start and end
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
         int left = 0;
-        int right = height.Length - 1;
-
+        int right = height.size() - 1;
+        int maxArea = 0;
         while(left < right) {
 
-            int currentWater = Math.Min(height[left], height[right]) * (right - left);
+            int leftHeight = height[left];
+            int rightHeight = height[right];
+            int width = right - left;
 
-            if(maxWater < currentWater) {
-                maxWater = currentWater;
-            }
+            int currentArea = min(leftHeight, rightHeight) * width;
+            maxArea = max(currentArea, maxArea);
 
-            // Contract the container from the side with the lower wall
-            if(height[left] > height[right]) {
-                right--;
-            }
-            else {
+            if(leftHeight < rightHeight){
                 left++;
             }
+            else {
+                right--;
+            }
+
         }
-        return maxWater;
+        return maxArea;
     }
-}
+};
