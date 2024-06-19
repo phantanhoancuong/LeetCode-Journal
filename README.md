@@ -26,7 +26,10 @@ Author: Cuong Phan
 | 121  | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy    | [C++](./algorithms/cpp/121_Iterative.cpp) | C++: Update minBuy and maxProfit separately. |C++: $O(n)$|C++: $O(1)$|
 | 122  | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Medium    | [C++](./algorithms/cpp/122_Iterative.cpp) | C++: If price is lower, update minBuy if not sell constantly. |C++: $O(n)$|C++: $O(1)$|
 | 125  | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy    | [C++](./algorithms/cpp/125_TwoPointers.cpp) | C++: Two pointers. |C++: $O(n)$|C++: $O(1)$|
-| 202  | [Happy Number](https://leetcode.com/problems/happy-number/) | Easy    | [C++_UnorderedSet](./algorithms/cpp/202_UnorderedSet.cpp) | C++_UnorderedSet: Use unordered set to keep track of what sum has been seen to detect cycle.|C++_UnorderedSet: $O(log(n))$ |C++_TwoRows: $O(log(n))$|
+| 202  | [Happy Number](https://leetcode.com/problems/happy-number/) | Easy    | [C++_UnorderedSet](./algorithms/cpp/202_UnorderedSet.cpp) | C++_UnorderedSet: Use unordered set to keep track of what sum has been seen to detect cycle.|C++_UnorderedSet: $O(log(n))$ |C++_UnorderedSet: $O(log(n))$|
+
+| 283  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy    | [C++_Swap](./algorithms/cpp/283_Swap.cpp) | C++_Swap: Iterate through the list, use a pointer to keep track of where the last non-zero element ahead of the current element to swap if the current element is 0.|C++_Swap: $O(n)$ |C++_TwoRows: $O(1)$|
+
 | 345  | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) | Easy    | [C++](./algorithms/cpp/345_TwoPointers.cpp) | C++: Two pointers approach. |C++: $O(n)$|C++: $O(1)$|
 | 383  | [Ramsom Note](https://leetcode.com/problems/ransom-note/) | Easy    | [C++](./algorithms/cpp/383_UnorderedMap.cpp) | C++: Build a map from the magazine then iterate and decrement map value by character's appearance in the ransom note. |C++: $O(m + n)$|C++: $O(m)$|
 | 392  | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | Easy    | [C++](./algorithms/cpp/392_Iterative.cpp) | C++: Iterative approach. |C++: $O(n)$|C++: $O(1)$|
