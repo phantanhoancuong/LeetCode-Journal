@@ -21,6 +21,12 @@ The answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1.
 class Solution {
 public:
     int tribonacci(int n) {
+        if(n == 0) {
+            return 0;
+        }
+        if(n == 1 || n == 2) {
+            return 1;
+        }
         int trib[max(n + 1, 3)];
         trib[0] = 0;
         trib[1] = 1;
