@@ -38,9 +38,6 @@ public:
                 index++; 
             }
         }
-        for(int i = 0; i < 26; i++) {
-            cout << subTable[i] << "\n";
-        }
         string decoded;
         for(int i = 0; i < message.size(); i++) {
             if(message[i] == ' ') {
