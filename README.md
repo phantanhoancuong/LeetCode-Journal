@@ -28,6 +28,12 @@ Author: Cuong Phan
 | 55  | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium    | [C++](./algorithms/cpp/55_Greedy.cpp) | C++: Use greedy algorithm, iterate through the vector, if current index is larger than max reach then return false else update max reach. |C++: $O(n)$|C++: $O(1)$|
 | 58  | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | Easy    | [C++](./algorithms/cpp/58_Iterative.cpp) | C++: Iterative approach, iterate from the back with 2 while loops (not nested). |C++: $O(n)$|C++: $O(1)$|
 | 66  | [Plus One](https://leetcode.com/problems/plus-one/) | Easy    | [C++](./algorithms/cpp/66_Iterative.cpp) | C++: Don't try to add too many conditions in the loop. |C++: $O(n)$|C++: $O(1)$|
+
+
+| 69  | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Easy    | [Python](./algorithms/py/69_BinarySearch.py) | Python: Use binary search to find the largest integer such that `mid * mid <= x`. Return `upper` after the loop because it is the last valid value before `lower` surpasses it. |Python: $O(\log x)$|Python: $O(1)$|
+
+
+
 | 75  | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium    | [C++](./algorithms/cpp/75_ThreePointers.cpp) | C++: Use the Dutch National Flag (3-way partition algorithm). |C++: $O(n)$|C++: $O(1)$|
 | 94  | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Easy    | [C++](./algorithms/cpp/94_Recursive.cpp) | C++: Use recursive depth-first traversal of the tree. |C++: $O(n)$|C++: $O(h) with h being the height of the tree.$|
 | 100  | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy    | [C++](./algorithms/cpp/100_Recursive.cpp) | C++: Use recursive depth-first traversal of the tree to see if each node pair is the same. |C++: $O(n)$|C++: $O(h) with h being the height of the tree.$|
