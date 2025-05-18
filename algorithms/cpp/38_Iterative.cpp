@@ -26,22 +26,23 @@ Constraints:
 1 <= n <= 30 */
  
 class Solution {
-public:
-    string countAndSay(int n) {
-        string resultString = "1";
-        for (int i = 1; i < n; ++i) {
-            string currentString;
-            int count = 1;
-            for (int j = 0; j < resultString.size(); j++) {
-                if (j < resultString.size() - 1 && resultString[j] == resultString[j + 1]) {
-                    count++;
-                } else {
-                    currentString += to_string(count) + resultString[j];
-                    count = 1;
+    public:
+        string countAndSay(int n) {
+            string curState = "1";
+    
+            for(int i = 0; i < n - 1; i++) {
+                string nextState = "";
+                int read_p = 0;
+                while(read_p < curState.size()) {
+                    int count = 0;
+                    while(read_p + count < curState.size() && curState[read_p + count] == curState[read_p]) {
+                        count++;
+                    }
+                    nextState += to_string(count) + curState[read_p];
+                    read_p += count;
                 }
+                curState = nextState;
             }
-            resultString = currentString;
+            return curState;
         }
-        return resultString;
-    }
-};
+    };
