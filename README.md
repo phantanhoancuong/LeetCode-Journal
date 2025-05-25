@@ -126,6 +126,15 @@ Author: Cuong Phan
 | 1929  | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-arry/) | Easy    | [C++](./algorithms/cpp/1929_Iterative.cpp) | C++: Iterative approach with the modulo operator. |C++: $O(n)$|C++: $O(n)$|
 | 2037  | [Minimum Number of Moves to Seat Everyone](https://leetcode.com/problems/mininum-number-of-moves-to-seat-everyone/) | Easy    | [C++](./algorithms/cpp/2037_Sorting.cpp) | C++: Sort the arrays, then calculate the difference between the paired elements. |C++: $O(nlog(n))$|C++: $O(log(n))$|
 | 2108 | [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) | Easy    | [C++](./algorithms/cpp/2108_TwoPointers.cpp) | C++: Iterate through the words vector, use two pointers left and right to check if the current word is palindromic |C++: $O(n * m)$|C++: $O(n)$|
+
+| 2131 | [Longest Palindrome by Concatenating Two Letter Words](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/) | Medium | [Python](./algorithms/py/2131_Dictionary.py) | Python: Use a frequency map to count occurrences. Match asymmetric reverse pairs and handle symmetric pairs with one optional center.|Python: $O(n)$|Python: $O(n)$|
+
+
+
+
+
+
+
 | 2149 | [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/) | Medium    | [C++](./algorithms/cpp/2149_TwoPointers.cpp) | C++: Use two pointers neg and pos to keep track of which position to add the current value from the nums vector to the result veector.|C++: $O(n)$|C++: $O(n)$|
 | 2215 | [Find the Difference of Two Arrays](https://leetcode.com/problems/find-the-difference-of-two-arrays/) | Easy    | [C++](./algorithms/cpp/2215_Set.cpp) | C++: Use sets to avoid duplicates and constant lookup time. |C++: $O(n)$|C++: $O(n)$|
 | 2300 | [Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/) | Medium | [C++](./algorithms/cpp/2300_BinarySearch.cpp) | C++: Sort the potions, for each spell perform binary search to find the number of potions that satisfy the product condition. Use `ceil((double)success / spell)` to get the minimum required potion strength. |C++: $O(m\log m + n \log m)$, with n = spells.size() and m = potions.size()|C++: $O(1)$|
