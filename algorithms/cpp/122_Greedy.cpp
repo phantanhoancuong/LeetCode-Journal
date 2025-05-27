@@ -27,27 +27,16 @@ Constraints:
 1 <= prices.length <= 3 * 10^4
 0 <= prices[i] <= 10^4
  */
-
 class Solution {
-public:
-    int maxProfit(vector<int>& prices) {
-        if(prices.size() < 2) {
-            return 0;
-        }
-
-        int minBuy = prices[0];
-        int maxProfit = 0;
-        int currentProfit = 0;
-        for(int i = 0; i < prices.size(); i++) {
-            if(prices[i] < minBuy) {
-                minBuy = prices[i];
+    public:
+        int maxProfit(vector<int>& prices) {
+            int maxProfit = 0;
+            for (int i = 1; i < prices.size(); i++) {
+                if (prices[i] > prices[i - 1]) {
+                    maxProfit += prices[i] - prices[i - 1];
+                }
             }
-            else {
-                currentProfit = prices[i] - minBuy;
-                minBuy = prices[i];
-                maxProfit += currentProfit;
-            }
+            return maxProfit;
         }
-        return maxProfit;
-    }
-};
+    };
+    

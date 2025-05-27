@@ -18,18 +18,21 @@ t.length == s.length + 1
 s and t consist of lowercase English letters. */
 
 class Solution {
-public:
-    char findTheDifference(string s, string t) {
-        unordered_map<char, int> mappings;
-        for(int i = 0; i < s.size(); i++) {
-            mappings[s[i]]++;
-        }
-        for(int i = 0; i < t.size(); i++) {
-            mappings[t[i]]--;
-            if(mappings[t[i]] < 0) {
-                return t[i];
+    public:
+        char findTheDifference(string s, string t) {
+            int freq[26] = {0};
+            
+            for (char ch : s) {
+                freq[ch - 'a']++;
             }
+            
+            for (char ch : t) {
+                freq[ch - 'a']--;
+                if (freq[ch - 'a'] < 0) {
+                    return ch;
+                }
+            }
+    
+            return 'a'; 
         }
-        return 'a';
-    }
-};
+    };

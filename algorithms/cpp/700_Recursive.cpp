@@ -30,21 +30,9 @@ root is a binary search tree.
  */
 class Solution {
 public:
-    void getSubroot(TreeNode*& subroot, TreeNode*& curNode, int& target) {
-        if(curNode == nullptr || subroot != nullptr) {
-            return;
-        }
-        if(curNode->val == target) {
-            subroot = curNode;
-            return;
-        }
-        getSubroot(subroot, curNode->left, target);
-        getSubroot(subroot, curNode->right, target);
-    }
-
     TreeNode* searchBST(TreeNode* root, int val) {
-        TreeNode* subroot = nullptr;
-        getSubroot(subroot, root, val);
-        return subroot;
+        if (!root || root->val == val) return root;
+        if (val < root->val) return searchBST(root->left, val);
+        return searchBST(root->right, val);
     }
 };

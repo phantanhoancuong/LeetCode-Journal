@@ -36,48 +36,43 @@ Follow-up: Can you implement the queue such that each operation is amortized O(1
 In other words, performing n operations will take overall O(n) time even if one of those operations may take longer. */
 
 class MyQueue {
-public:
-    stack<int> finalStack;
-    stack<int> tempStack;
-    MyQueue() {
-
-    }
+    public:
+        stack<int> inStack;   
+        stack<int> outStack;  
     
-    void push(int x) {
-        finalStack.push(x);
-    }
+        MyQueue() {}
     
-    int pop() {
-        while(!finalStack.empty()) {
-            tempStack.push(finalStack.top());
-            finalStack.pop();
+        void push(int x) {
+            inStack.push(x);
         }
-        int poppedValue = tempStack.top();
-        tempStack.pop();
-        while(!tempStack.empty()) {
-            finalStack.push(tempStack.top());
-            tempStack.pop();
-        }
-        return poppedValue;
-    }
     
-    int peek() {
-        while(!finalStack.empty()) {
-            tempStack.push(finalStack.top());
-            finalStack.pop();
+        int pop() {
+            if (outStack.empty()) {
+                while (!inStack.empty()) {
+                    outStack.push(inStack.top());
+                    inStack.pop();
+                }
+            }
+            int result = outStack.top();
+            outStack.pop();
+            return result;
         }
-        int poppedValue = tempStack.top();
-        while(!tempStack.empty()) {
-            finalStack.push(tempStack.top());
-            tempStack.pop();
-        }
-        return poppedValue;
-    }
     
-    bool empty() {
-        return finalStack.empty();
-    }
-};
+        int peek() {
+            if (outStack.empty()) {
+                while (!inStack.empty()) {
+                    outStack.push(inStack.top());
+                    inStack.pop();
+                }
+            }
+            return outStack.top();
+        }
+    
+        bool empty() {
+            return inStack.empty() && outStack.empty();
+        }
+    };
+    
 
 /**
  * Your MyQueue object will be instantiated and called as such:
